@@ -1,42 +1,3 @@
-// // const fs = require('fs');
-// // console.log(fs);
-
-// function Person(name){
-//     this.name = name;
-//     this.hello = () =>{
-//         console.log(`Name = ${this.name}` );
-//     }
-// }
-
-// const Bill = new Person('Bill');
-// Bill.hello();
-
-// const args = process.args;
-// console.log(args);
-
-//=========================================================================
-
-//console.log(process.argv);
-
-// const args = process.argv.slice(2);
-// console.log(args);
-
-// switch (args[0]) {
-//     case '--version':
-//         console.log("v.0.1.0");
-//         break;
-
-//     case '--help':
-//         console.log("--help");
-//         console.log("--version");
-//         break;
-
-//     default:
-//         console.log("use --help");
-//         break;
-// }
-
-//================================== Create Person ===============================================
 const User = require('./classes/User');
 const Dog = require('./classes/Dog');
 const Cat = require('./classes/Cat');
@@ -52,8 +13,8 @@ switch(argv[0]){
         case `--create`:
             let name = argv[1];
             let pass = argv[2];
-            let user = new User(name, pass);
-            user.ShowUser();
+            let users = new User(name, pass);
+            users.ShowUser();
         break;
 
         case `--generate`:
@@ -68,16 +29,16 @@ switch(argv[0]){
                 let nickname = argv[1];
                 let color = argv[2];
                 let siblings = argv[3];
-                let dog = new Dog(nickname, color, siblings);
-                dog.ShowCat();
+                let cats = new Cat(nickname, color, siblings);
+                cats.ShowCat();
             break;
             
-        case `--produce`:
-                let nickname = argv[1];
-                let color = argv[2];
-                let siblings = argv[3];
-                let dog = new Dog(nickname, color, siblings);
-                dog.ShowCat();
+        case `--discover`:
+                let type = argv[1];
+                let material = argv[2];
+                let size = argv[3];
+                let toys = new Toy(type, material, size);
+                toys.ShowToy();
             break;
 
     default:
@@ -93,4 +54,7 @@ Jack.ShowDog();
 
 let Nika = new Cat("Nika", "white", 3);
 Nika.ShowCat();
+
+let Jerry = new Toy("mouse", "wood", "big");
+Jerry.ShowToy();
 

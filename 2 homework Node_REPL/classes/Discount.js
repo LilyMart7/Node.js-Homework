@@ -1,14 +1,17 @@
 class DiscountCard {
-    constructor(name) {
+    constructor(name, money) {
         this.name = name;
         this.cardNumber = Math.floor(Math.random() * 20455567);
-        this.discount = 1;
-      
+        this.money = parseInt(money);
+        this.discount = this.money/10 *0.01; 
+        this. moneyWithDiscount =  this.money/ 100 * this.discount;
+        this.allMoney =  parseInt(this.money) - parseInt(this.moneyWithDiscount);
     }
-    ShowDiscount() {
-        console.log(`Name: ${this.name}  Card number: ${this.cardNumber } Current discount: ${this.discount}`)
-    }
-  
+    ShowDiscountCard() {
+        console.log(`Name: ${this.name} Card Number: ${this.cardNumber}, Amount: ${this.money} Discount: ${this.discount}%, Discount Amount: ${this.moneyWithDiscount}, Final Amount: ${this.allMoney}`);
+    }    
+
+
 }
 
-module.exports =  Discount;
+module.exports =  DiscountCard;

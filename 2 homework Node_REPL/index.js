@@ -15,12 +15,12 @@ switch (argv[0]) {
 
     case `--create`:
         let name = argv[1]
-        let money = argv[2];
+        let amount = argv[2];
         let discount = argv[3];
-        let moneyWithDiscount = argv[4];
-        let allMoney = argv[5];
+        let amountWithDiscount = argv[4];
+        let finalAmount = argv[5];
 
-        let data = new DiscountCard(name, money, discount, moneyWithDiscount, allMoney);
+        let data = new DiscountCard(name,amount, discount, amountWithDiscount, finalAmount);
         data.ShowDiscountCard();
 
         break;

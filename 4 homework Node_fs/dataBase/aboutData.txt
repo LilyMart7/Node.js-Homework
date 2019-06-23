@@ -1,0 +1,4 @@
+{
+  "title": "About us",
+  "capture": "About us"
+}
